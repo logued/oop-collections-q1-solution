@@ -6,7 +6,6 @@ import java.util.ListIterator;
 
 /**
  * Collections Exercise SOLUTIONS   Feb 2023
- *
  */
 public class App 
 {
@@ -18,28 +17,21 @@ public class App
     }
 
     public void start() {
-
-        // Instantialize and populate the list
+        // Instantiate and populate the list
         LinkedList<Integer> list = new LinkedList<Integer>((Arrays.asList(1,2,3,4,5,6,7,8,9,10)));
 
         LinkedList<Integer> reducedList = new LinkedList<Integer>();
 
-        int count =0;
         // Use iterator
-        ListIterator<Integer> iter = list.listIterator();
-        while( iter.hasNext() ) {
-            int value = iter.next();
+        ListIterator<Integer> iterator = list.listIterator();
+        while( iterator.hasNext() ) {
+            int value = iterator.next();
             reducedList.add( value);
-            if( iter.hasNext()) {
-                iter.next();  // skip one
+            if( iterator.hasNext()) {
+                iterator.next();  // skip one
             }
         }
 
         System.out.println( reducedList );
-
-
-
-
-
     }
 }
